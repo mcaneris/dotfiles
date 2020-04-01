@@ -1,0 +1,5 @@
+configuration {
+  show-icons	: true;
+  terminal	: "alacritty";
+  theme		: "/home/mce/.config/rofi/nord.rasi";
+}

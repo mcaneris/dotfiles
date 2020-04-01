@@ -1,0 +1,111 @@
+; ---------------------------------------------------------------
+; COLORS
+; ---------------------------------------------------------------
+
+[color]
+transparent		  = #00FFFFFF
+base-bg			  = #FFFFFF
+base-fg			  = #444444
+orange			  = #E57860
+
+; ---------------------------------------------------------------
+; GLOBAL
+; ---------------------------------------------------------------
+
+[global/wm]
+margin-top		 = 0
+margin-bottom		 = 0
+
+; ---------------------------------------------------------------
+; MAIN BAR CONFIGURATION
+; ---------------------------------------------------------------
+
+; INTERNAL MONITOR
+
+[bar/main]
+monitor			= eDP-1
+height			= 30
+line-size		= 30
+
+background		= ${color.transparent}
+foreground		= ${color.base-fg}
+
+font-0			= "Roboto:size=10;4"
+font-1			= "Roboto:size=10:weight=bold;4"
+
+fixed-center		= true
+
+tryay-position		= right
+
+modules-left 		= system
+modules-center		= date
+modules-right		= wifi
+
+; EXTERNAL MONITOR
+
+[bar/main-external]
+monitor			= DP-1
+monitor-strict		= true
+height			= 30
+line-size		= 30
+
+background		= ${color.transparent}
+foreground		= ${color.base-fg}
+
+font-0			= "Roboto:size=10;4"
+font-1			= "Roboto:size=10:weight=bold;4"
+
+fixed-center		= true
+
+modules-left 		= system
+modules-center		= date
+modules-right		= wifi
+
+; ------------------------------------------------------------
+; SYSTEM MODULE
+; ------------------------------------------------------------
+
+[module/system]
+type 				= internal/bspwm
+pin-workspaces			= true
+
+format				= <label-state>
+format-background		= ${color.base-bg}
+
+label-state			= %name%
+
+label-focused-font	  	= 2
+label-focused-foreground  	= ${color.orange}
+label-focused-padding		= 2
+
+label-occupied-padding		= 2
+label-empty-padding		= 2
+
+; --------------------------------------------------------------
+; DATE MODULE
+; --------------------------------------------------------------
+
+[module/date]
+type			= internal/date
+interval		= 1.0
+
+date			= %d %B %Y  %A
+time			= %H : %M
+
+label 			= %date%  %time%
+label-font		= 1
+
+; --------------------------------------------------------------
+; WI-FI MODULE
+; --------------------------------------------------------------
+
+[module/wifi]
+type			= internal/network
+interface		= wlp2s0
+interval		= 3.0
+
+format-connected	= <label-connected>
+format-connected-foreground = ${color.orange}
+
+label-connected		= %essid% %downspeed%
+label-connected-padding = 4
