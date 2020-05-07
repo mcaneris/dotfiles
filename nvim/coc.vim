@@ -45,6 +45,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 "  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "endif
 
+
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)

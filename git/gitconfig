@@ -1,0 +1,74 @@
+[user]
+    email = caneris@gmail.com
+    name = mcaneris
+
+[alias]
+    # list all the aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    
+    # basic shortcuts
+    cp = cherry-pick
+    st = status -s
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch
+    diff = diff --word-diff
+    dc = diff --cached
+
+    # reset commands
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    # stash commands
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    
+    # add remote
+    ra = "!f() { \
+        git remote add $1 https://bitbucket.org/$2.git; \
+        }; f"
+
+
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+
+    # list commits in short form, with colors and branch/tag annotations
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+    # list commits showing changed files
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+    # list one-line commits showing dates
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    # list one-line commits showing relative dates
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+
+    # show file history, with diffs
+    filelog = log -u
+    fl = log -u
+
+    # show modified files in last commit
+    dl = "!git ll -1"
+
+    # show a diff last commit
+    dlc = diff --cached HEAD^
+
+    # show content (full diff) of a commit given a revision
+    dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    lc  = "!f() { git ll "$1"^.."$1"; }; f"
+    diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+    # find a file path in codebase:
+    f = "!git ls-files | grep -i"
+
+    # search/grep entire codebase for a string:
+    grep = grep -Ii
+    gr = grep -Ii
+    
+    # Rename [branch] to done-[branch]
+    done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"

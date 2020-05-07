@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$PATH
-
 export EDITOR="nvim"
 
 # Path to your oh-my-zsh installation.
@@ -106,3 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# opam configuration
+test -r /home/mce/.opam/opam-init/init.zsh && . /home/mce/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

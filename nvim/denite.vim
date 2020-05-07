@@ -1,3 +1,7 @@
+nmap <leader>p :Denite -start-filter file/rec<CR>
+nmap <leader>b :Denite buffer<CR>
+nnoremap \ :Denite grep<CR>
+
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

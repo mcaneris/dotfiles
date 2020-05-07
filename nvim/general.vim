@@ -1,5 +1,4 @@
 set termguicolors
-set path+=**
 
 " INDENTATION
 set shiftwidth=4
@@ -8,8 +7,12 @@ set expandtab
 set clipboard+=unnamedplus
 
 " LINE NUMBERING
-set number relativenumber
-set nu rnu
+set number
+augroup numbertoggle
+    autocmd!
+    autocmd InsertLeave * set relativenumber
+    autocmd InsertEnter * set norelativenumber
+augroup END
 set numberwidth=5
 
 " no swap files
@@ -44,3 +47,10 @@ set incsearch
 
 " display incomplete commands
 set showcmd
+
+set autoread
+augroup autoreadfiles
+    autocmd!
+    autocmd CursorHold,CursorHoldI * checktime
+    autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk - Buffer reloaded" | echohl None
+augroup END

@@ -4,6 +4,7 @@ inoremap jk <ESC>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
 noremap <Up> <Nop>
 
 nnoremap ; :
@@ -18,3 +19,5 @@ nnoremap <C-l> <C-w>l
 nnoremap <PageDown> <Nop>
 nnoremap <PageUp> <Nop>
 
+" refmt
+nnoremap <silent> gf :! refmt --in-place %<CR>
