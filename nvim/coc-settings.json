@@ -1,51 +1,17 @@
 {
-    "languageserver": {
-        "purescript": {
-            "command": "purescript-language-server",
-            "args": ["--stdio"],
-            "filetypes": ["purescript"],
-            "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"]
-        },
-        "reason": {
-            "command": "reason-language-server",
-            "filetypes": ["reason", "ocaml"]
-        },
-        "haskell": {
-            "command": "hie-wrapper",
-            "rootPatterns": [
-                ".stack.yaml",
-                "cabal.config",
-                "package.yaml"
-            ],
-            "filetypes": [
-                "hs",
-                "lhs",
-                "haskell"
-            ],
-            "initializationOptions": {
-            }
-        },
-        "intelephense": {
-            "command": "intelephense",
-            "args": ["--stdio"],
-            "filetypes": ["php"],
-            "initializationOptions": {
-                "storagePath": "/tmp/intelephense"
-            }
-        },
-        "elmLS": {
-            "command": "elm-language-server",
-            "args": ["--stdio"],
-            "filetypes": ["elm"],
-            "rootPatterns": ["elm.json"],
-            "initializationOptions": {
-                "runtime": "node",
-                "elmPath": "./node_modules/.bin/elm",
-                "elmFormatPath": "./node_modules/.bin/elm-format",
-                "elmTestPath": "./node_modules/.bin/elm-test"
-            }
-        }
-    },
-    "coc.preferences.extensionUpdateCheck": "never",
-    "coc.preferences.formatOnSaveFiletypes": ["tsx", "ts", "jsx", "js", "css", "html", "elm", "re", "rei", "ml", "mli"]
+    // HTML
+    "html.enable": true,
+    "html.format.enable": true,
+    "html.format.indentInnerHtml": true,
+    "html.autoClosingTags": true,
+    "html.filetypes": [
+        "html",
+        "eelixir"
+    ],
+    // Elixir
+    "elixir.enable": true,
+    "elixirLS.mixEnv": "dev",
+    "elixirLS.mixTarget": "test",
+    // SQL
+    "sql.database": "mysql"
 }
