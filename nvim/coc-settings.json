@@ -8,6 +8,8 @@
         "html",
         "eelixir"
     ],
+    // CSS
+    "scss.validate": false,
     // Elixir
     "elixir.enable": true,
     "elixirLS.mixEnv": "dev",
