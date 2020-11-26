@@ -1,2 +1,3 @@
 nvim/plugged
 oh-my-zsh/themes
+*/**/*.patch
