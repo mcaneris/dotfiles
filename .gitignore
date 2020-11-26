@@ -1,3 +1,4 @@
 nvim/plugged
 oh-my-zsh/themes
 */**/*.patch
+jesseduffield/lazygit/state.yml
