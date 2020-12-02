@@ -9,7 +9,7 @@
         "eelixir"
     ],
     // CSS
-    "scss.validate": false,
+    "coc.preferences.formatOnSaveFiletypes": ["css", "scss"],
     // Elixir
     "elixir.enable": true,
     "elixirLS.mixEnv": "dev",
