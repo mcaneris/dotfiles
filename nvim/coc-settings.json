@@ -15,5 +15,7 @@
     "elixirLS.mixEnv": "dev",
     "elixirLS.mixTarget": "test",
     // SQL
-    "sql.database": "mysql"
+    "sql.database": "mysql",
+    // YAML
+    "yaml.format.enable": true
 }

@@ -13,6 +13,11 @@ Plug 'https://github.com/joshdick/onedark.vim.git'
 " COC
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 
+Plug 'neomake/neomake'
+
+" Timber
+Plug 'nelsyeung/twig.vim'
+
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
 

@@ -5,6 +5,7 @@ let g:config_file_list = [
   \ 'plugins/lightline.vim',
   \ 'plugins/nnn.vim',
   \ 'plugins/startify.vim',
+  \ 'plugins/neomake.vim',
   \ 'mappings.vim',
   \ 'colors.vim'
   \ ]
