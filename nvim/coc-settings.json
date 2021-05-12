@@ -5,9 +5,11 @@
     "html.format.indentInnerHtml": true,
     "html.autoClosingTags": true,
     "html.filetypes": [
-        "html",
-        "eelixir"
+	"html",
+	"eelixir"
     ],
+    // JS
+    "tsserver.enableJavascript": true,
     // CSS
     "coc.preferences.formatOnSaveFiletypes": ["css", "scss"],
     // Elixir
@@ -17,5 +19,17 @@
     // SQL
     "sql.database": "mysql",
     // YAML
-    "yaml.format.enable": true
+    "yaml.format.enable": true,
+    "yaml.customTags": [
+	"!Equals sequence",
+	"!FindInMap sequence",
+	"!GetAtt",
+	"!GetAZs",
+	"!ImportValue",
+	"!Join sequence",
+	"!Ref",
+	"!Select sequence",
+	"!Split sequence",
+	"!Sub"
+    ]
 }
