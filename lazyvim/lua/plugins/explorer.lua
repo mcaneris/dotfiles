@@ -23,7 +23,7 @@ return {
       follow_current_file = { enabled = true, leave_dirs_open = true },
     },
     window = {
-      position = "float",
+      position = "left",
       popup = {
         title = function(_) -- format the text that appears at the top of a popup window
           -- return "Neo-tree " .. state.name:gsub("^%l", string.upper)

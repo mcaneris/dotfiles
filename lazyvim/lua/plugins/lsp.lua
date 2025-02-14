@@ -46,7 +46,7 @@ return {
                 closureCaptureHints = { enable = true },
                 closureReturnTypeHints = { enable = true },
                 lifetimeElisionHints = { enable = true, useParameterNames = true },
-                expressionAdjustmentHints = { enable = true },
+                expressionAdjustmentHints = { enable = false },
                 discriminantHints = { enable = true },
                 bindingModeHints = { enable = true },
                 genericParameterHints = {
